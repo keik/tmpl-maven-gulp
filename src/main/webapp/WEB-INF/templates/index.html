@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>tmpl-maven-gulp</title>
+    <!-- vendor:css -->
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css" th:href="@{/vendor/bootstrap/dist/css/bootstrap.css}" />
+    <!-- endinject -->
+    <link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>tmpl-maven-gulp</h1>
+      <p>
+        tmpl-maven-gulp is tiny sample that integrate Maven and gulp.
+      </p>
+      <p>
+        When you package WAR, <code>gulp build</code> would execute, and as a result,
+      </p>
+      <ul>
+        <li>HTML / CSS / JavaScript resources would be minified automaticaly.</li>
+        <li>Bower components would be downloaded and injected to HTML automaticaly.</li>
+      </ul>
+    </div>
+    <!-- vendor:js -->
+    <script src="/vendor/jquery/dist/jquery.js" th:src="@{/vendor/jquery/dist/jquery.js}"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.js" th:src="@{/vendor/bootstrap/dist/js/bootstrap.js}"></script>
+    <script src="/vendor/html5shiv/dist/html5shiv.js" th:src="@{/vendor/html5shiv/dist/html5shiv.js}"></script>
+    <script src="/vendor/respond/dest/respond.src.js" th:src="@{/vendor/respond/dest/respond.src.js}"></script>
+    <!-- endinject -->
+  </body>
+</html>

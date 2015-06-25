@@ -1,0 +1,19 @@
+{
+  "name": "tmpl-maven-gulp",
+  "version": "1.0.0-SNAPSHOT",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "slickgrid": "~2.1.0",
+    "bootstrap": "~3.3.2",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2"
+  }
+}

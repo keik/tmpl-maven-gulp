@@ -1,0 +1,11 @@
+{
+  "box-model": false,
+  "adjoining-classes": false,
+  "box-sizing": false,
+  "important": true,
+  "known-properties": true,
+  "duplicate-properties": true,
+  "empty-rules": true,
+  "qualified-headings": false,
+  "unique-headings": false
+}

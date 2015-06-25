@@ -1,0 +1,48 @@
+// JSHint 2.4.4
+// http://jshint.com/docs/options/
+
+{
+  // 開発時のみ true を推奨
+  "devel": true,                  // console や alert の使用を許可
+  "globals": {                    // グローバル定義するプロパティを列挙する
+    // "MYAPP": false             // (例) MYAPP という変数を定義済みとして扱う
+  },
+
+  // Enforcing options
+  "bitwise": true,                // ビット演算を禁止する
+  "camelcase": true,              // キャメルケースの使用を必須にする
+  "curly": true,                  // if や for 文で { } ブロックの省略を禁止する
+  "eqeqeq": true,                 // 比較には ===, !=== の使用を必須にする
+  "forin": false,                 // for in 文で hasOwnProperty によるプロパティチェックを必須にする
+  "freeze": true,                 // ネイティブオブジェクトのプロトタイプ拡張を禁止する
+  "globalstrict": false,          // グローバルでの strict 宣言を禁止する
+  "immed": true,                  // 即時関数は () で囲むことを必須にする
+  "indent": 2,                    // インデントはスペース2つを使用する
+  "latedef": "nofunc",            // 後から定義した関数を先に使用することを許可する
+  "newcap": true,                 // コンストラクタ関数は大文字から始めることを強制する
+  "noarg": true,                  // arguments.callee, arguments.caller へのアクセスを禁止する
+  "noempty": true,                // 空のブロックを禁止する
+  "nonbsp": true,                 // ノーブレークスペース文字の使用を禁止する
+  "nonew": true,                  // new 演算子を使用する場合はその結果を変数に代入することを必須とする
+  "plusplus": false,              // ++ や -- 演算子を許可する
+  "quotmark": "single",           // クォーテーションはシングルを使用する
+  "undef": true,                  // 未宣言の変数を禁止する
+  "unused": true,                 // 未使用の変数を指摘する
+  "strict": true,                 // strict モードの使用を強制する
+  "trailing": true,               // 行の後端に無意味なスペース文字があることを禁止する
+  "maxparams": false,             // パラメータの最大数には制約を設けない
+  "maxdepth": false,              // 最大深さには制約を設けない
+  "maxstatements": false,         // 宣言する変数の最大数には制約を設けない
+  "maxcomplexity": false,         // 複雑度には制約を設けない
+  "maxlen": 80,                   // 1行の最大文字数は80
+
+  // Relaxing options
+  // デフォルトのまま
+
+  // Environment
+  "browser": true,                // ブラウザ環境 (document などを定義済みとして扱う)
+  "jquery": true,                 // jQuery の使用する変数を定義済みとして扱う
+
+  // Legacy
+  "white": true                   // スペースを用いて可読性を向上させる
+}
