@@ -40,83 +40,58 @@
   </dependencies>
 
   <build>
-    <!--
-        <pluginManagement>
-        <plugins>
+    <pluginManagement>
+      <plugins>
         <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <version>${org.codehaus.mojo.build-helper-maven-plugi.version}</version>
-        <executions>
-        <execution>
-        <id>add-source</id>
-        <phase>generate-sources</phase>
-        <goals>
-        <goal>add-source</goal>
-        </goals>
-        <configuration>
-        <sources>
-        <source>src/generated/java</source>
-        </sources>
-        </configuration>
-        </execution>
-        <execution>
-        <id>add-resource</id>
-        <phase>generate-resources</phase>
-        <goals>
-        <goal>add-resource</goal>
-        </goals>
-        <configuration>
-        <resources>
-        <resource>
-        <directory>src/generated/resources</directory>
-        </resource>
-        </resources>
-        </configuration>
-        </execution>
-        </executions>
+          <artifactId>maven-war-plugin</artifactId>
+          <configuration>
+            <warSourceDirectory>${basedir}/target/dist</warSourceDirectory>
+            <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+          </configuration>
         </plugin>
         <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <configuration>
-        <warSourceDirectory>${basedir}/target/dist</warSourceDirectory>
-        <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
-        </configuration>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>com.github.eirslett</groupId>
+                    <artifactId>frontend-maven-plugin</artifactId>
+                    <versionRange>0.0.23</versionRange>
+                    <goals>
+                      <goal>npm</goal>
+                      <goal>gulp</goal>
+                      <goal>grunt</goal>
+                      <goal>bower</goal>
+                      <goal>ember</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <execute>
+                      <runOnIncremental>false</runOnIncremental>
+                    </execute>
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
         </plugin>
-        <plugin>
-        <groupId>org.eclipse.m2e</groupId>
-        <artifactId>lifecycle-mapping</artifactId>
-        <version>1.0.0</version>
-        <configuration>
-        <lifecycleMappingMetadata>
-        <pluginExecutions>
-        <pluginExecution>
-        <pluginExecutionFilter>
-        <groupId>com.github.eirslett</groupId>
-        <artifactId>frontend-maven-plugin</artifactId>
-        <versionRange>0.0.23</versionRange>
-        <goals>
-        <goal>npm</goal>
-        <goal>gulp</goal>
-        <goal>grunt</goal>
-        <goal>bower</goal>
-        <goal>ember</goal>
-        </goals>
-        </pluginExecutionFilter>
-        <action>
-        <execute>
-        <runOnIncremental>false</runOnIncremental>
-        </execute>
-        </action>
-        </pluginExecution>
-        </pluginExecutions>
-        </lifecycleMappingMetadata>
-        </configuration>
-        </plugin>
-        </plugins>
-        </pluginManagement>
-    -->
+      </plugins>
+    </pluginManagement>
+
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>${java-version}</source>
+          <target>${java-version}</target>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
